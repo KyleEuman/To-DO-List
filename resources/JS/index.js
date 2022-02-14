@@ -8,6 +8,8 @@ document.getElementById('add').addEventListener('click' , function() {
     if (value) addItemTodo(value);
 });
 
+
+//Adds new item to todo list
 function addItemTodo(text) {
     var list = document.getElementById('todo');
 
@@ -19,7 +21,7 @@ function addItemTodo(text) {
 
     var Remove = document.createElement('button');
     Remove.classList.add('Remove');
-    Remove.innerHTML =RemoveSVG
+    Remove.innerHTML =RemoveSVG;
 
     var Complete = document.createElement('button');
     Complete.classList.add('Complete');
@@ -28,4 +30,6 @@ function addItemTodo(text) {
     buttons.appendChild(Remove);
     buttons.appendChild(Complete);
     item.appendChild(buttons);
+
+    list.insertBefore(item, list.childNodes[0]);
 }

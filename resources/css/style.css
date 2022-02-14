@@ -194,8 +194,12 @@ ul.todo#Completed li .buttons button.Complete svg {
     border:0px;
 }
 
-ul.todo#Completed li .buttons button.Complete svg .fill {
+ul.todo:not(#Completed) li .buttons button.Complete:hover svg .fill {
     fill:#fff;
+}
+
+ul.todo:not(#Completed) li .buttons button.Complete:hover svg  {
+background:#00f784;
 }
    
 
